@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patipan Sitthiprawiat, MD - Curriculum Vitae</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 0; }
+            .page-break { page-break-after: always; }
+            @page { margin: 1.5cm; }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+            line-height: 1.5;
+            color: #1a1a1a;
+            background: #fafafa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 21cm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        .header {
+            background: #1e293b;
+            color: white;
+            padding: 50px 50px 40px;
+            text-align: center;
+            border-bottom: 2px solid #0f172a;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .header .subtitle {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 4px;
+            opacity: 0.95;
+        }
+
+        .header .institution {
+            font-size: 13px;
+            font-weight: 300;
+            opacity: 0.85;
+        }
+        
+        .content {
+            padding: 40px 50px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0f172a;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 6px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .contact-icon {
+            font-weight: bold;
+            color: #64748b;
+        }
+        
+        .education-item, .publication-item, .cert-item {
+            margin-bottom: 20px;
+        }
+        
+        .education-title {
+            font-weight: 600;
+            font-size: 15px;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+
+        .education-date {
+            font-weight: 500;
+            color: #64748b;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .education-details {
+            color: #475569;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        
+        .publication-item {
+            font-size: 13px;
+            line-height: 1.7;
+            padding-left: 15px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+        
+        .publication-item:before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .authors {
+            color: #475569;
+        }
+
+        .author-highlight {
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .publication-title {
+            font-style: italic;
+            margin: 3px 0;
+        }
+
+        .journal {
+            font-weight: 500;
+            color: #64748b;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .skill-category {
+            margin-bottom: 15px;
+        }
+        
+        .skill-category-title {
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 3px 0;
+            padding-left: 15px;
+            position: relative;
+            font-size: 13px;
+        }
+
+        .skill-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #94a3b8;
+        }
+        
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .cert-category {
+            margin-bottom: 15px;
+        }
+        
+        .cert-category-title {
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .cert-list {
+            list-style: none;
+        }
+
+        .cert-list li {
+            padding: 3px 0;
+            padding-left: 15px;
+            position: relative;
+            font-size: 13px;
+        }
+
+        .cert-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #94a3b8;
+            font-weight: normal;
+        }
+        
+        .research-item {
+            margin-bottom: 12px;
+            padding-left: 15px;
+            position: relative;
+            font-size: 14px;
+        }
+        
+        .research-item:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .project-title {
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .project-role {
+            color: #64748b;
+            font-size: 13px;
+            font-style: italic;
+        }
+        
+        .language-item {
+            display: inline-block;
+            margin-right: 30px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .language-name {
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .honors-list {
+            list-style: none;
+        }
+
+        .honors-list li {
+            padding: 4px 0;
+            padding-left: 15px;
+            position: relative;
+            font-size: 13px;
+        }
+
+        .honors-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #94a3b8;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8fafc;
+            color: #64748b;
+            font-size: 11px;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>PATIPAN SITTHIPRAWIAT, MD</h1>
+            <div class="subtitle">Emergency Medicine Specialist</div>
+            <div class="institution">Department of Emergency Medicine, Faculty of Medicine, Chiang Mai University</div>
+        </div>
+        
+        <!-- Content -->
+        <div class="content">
+            <!-- Contact Information -->
+            <div class="section">
+                <div class="section-title">Contact Information</div>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span>+66 98 251 8399</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉</span>
+                        <span>patipan.s@cmu.ac.th</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🏠</span>
+                        <span>Chiang Mai, Thailand</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Education -->
+            <div class="section">
+                <div class="section-title">Education</div>
+                
+                <div class="education-item">
+                    <div class="education-title">Board Certification in Emergency Medicine</div>
+                    <div class="education-date">2021 - 2025</div>
+                    <div class="education-details">
+                        Faculty of Medicine, Chiang Mai University
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-title">Doctor of Medicine (MD)</div>
+                    <div class="education-date">2015 - 2021</div>
+                    <div class="education-details">
+                        Faculty of Medicine, Chiang Mai University
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Peer-Reviewed Publications -->
+            <div class="section">
+                <div class="section-title">Peer-Reviewed Publications</div>
+                
+                <div class="publication-item">
+                    <div class="authors">
+                        <span class="author-highlight">Sitthiprawiat P</span>, Wittayachamnankul B, Sirikul W, Laohavisudhi K.
+                    </div>
+                    <div class="publication-title">
+                        Development and internal validation of an AI-based emergency triage model for predicting critical outcomes in emergency department.
+                    </div>
+                    <div class="journal">Scientific Reports, 15, 31212 (2025).</div>
+                    <div>https://doi.org/10.1038/s41598-025-17180-1</div>
+                </div>
+                
+                <div class="publication-item">
+                    <div class="authors">
+                        Hiranwong T, Wongpakaran N, <span class="author-highlight">Sitthiprawiat P</span>, Siritikul S, Jiwtrakul J, Klaychaiya S, Chaipinchana P, Narkchang T, Kuntawong P, Deesomchok A, Wedding D, Wongpakaran T.
+                    </div>
+                    <div class="publication-title">
+                        Prevalence and impact of mistreatment on academic motivation among clinical year medical students in Thailand.
+                    </div>
+                    <div class="journal">Scientific Reports, 15 (2025).</div>
+                </div>
+                
+                <div class="publication-item">
+                    <div class="authors">
+                        <span class="author-highlight">Sitthiprawiat P</span>, Wittayachamnankul B, Laohakul P.
+                    </div>
+                    <div class="publication-title">
+                        Multimodal management of refractory ventricular tachycardia due to aconitine poisoning: A case report in a resource-limited setting.
+                    </div>
+                    <div class="journal">Journal of the American College of Emergency Physicians Open (2025).</div>
+                </div>
+                
+                <div class="publication-item">
+                    <div class="authors">
+                        Jiradechpitak U, Tangsuwanaruk T, <span class="author-highlight">Sitthiprawiat P</span>, Wittayachamnankul B.
+                    </div>
+                    <div class="publication-title">
+                        Comparison of hydrocortisone 100 mg bolus plus 200 mg/day infusion vs. infusion alone in refractory septic shock.
+                    </div>
+                    <div class="journal">Journal of Intensive Medicine (2025).</div>
+                </div>
+                
+                <div class="publication-item">
+                    <div class="authors">
+                        Hiranwong T, <span class="author-highlight">Sitthiprawiat P</span>, Siritikul S, Jiwtrakul J, Klaychaiya S, Chaipinchana P, Kuntawong P, Wongpakaran T, Wongpakaran N, Deesomchok A, Wedding D.
+                    </div>
+                    <div class="publication-title">
+                        Mental strength and challenges among Thai medical students in their clinical years—Study protocol.
+                    </div>
+                    <div class="journal">Healthcare, 9(3), 305 (2021).</div>
+                    <div>https://doi.org/10.3390/healthcare9030305</div>
+                </div>
+            </div>
+            
+            <!-- Active Projects -->
+            <div class="section">
+                <div class="section-title">Active Projects (Principal Investigator)</div>
+
+                <div class="research-item">
+                    <span class="project-title">AI-Based Triage Decision Support System</span><br>
+                    <span class="project-role">External validation phase</span>
+                </div>
+                <div class="research-item">
+                    <span class="project-title">Emergency Staff Shift Scheduling with Constraint Programming</span><br>
+                    <span class="project-role">Operations optimization, 2021-present</span>
+                </div>
+                <div class="research-item">
+                    <span class="project-title">Medical Student Performance Assessment System</span><br>
+                    <span class="project-role">Emergency Medicine Department, 2021-present</span>
+                </div>
+                <div class="research-item">
+                    <span class="project-title">AI-Powered Medical Conversation Transcription in the ED</span><br>
+                    <span class="project-role">Proof-of-concept phase</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="page-break"></div>
+        
+        <div class="content">
+            <!-- Certifications -->
+            <div class="section">
+                <div class="section-title">Certifications</div>
+
+                <div class="cert-grid">
+                    <div class="cert-category">
+                        <div class="cert-category-title">Instructor:</div>
+                        <ul class="cert-list">
+                            <li>ACLS (Advanced Cardiovascular Life Support)</li>
+                            <li>BLS (Basic Life Support)</li>
+                        </ul>
+                    </div>
+
+                    <div class="cert-category">
+                        <div class="cert-category-title">Provider:</div>
+                        <ul class="cert-list">
+                            <li>PALS (Pediatric Advanced Life Support)</li>
+                            <li>ATLS (Advanced Trauma Life Support)</li>
+                            <li>WAFA (ilderness Medicine Advanced First Aid)</li>
+                            <li>TECC (Tactical Emergency Casualty Care)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Core Competencies -->
+            <div class="section">
+                <div class="section-title">Core Competencies</div>
+
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-category-title">Clinical:</div>
+                        <ul class="skill-list">
+                            <li>Emergency Medicine</li>
+                            <li>Advanced Resuscitation & Trauma</li>
+                            <li>Toxicology & Poisoning Management</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Technical:</div>
+                        <ul class="skill-list">
+                            <li>Machine Learning</li>
+                            <li>Neural Network (Pytorch, Tensorflow)</li>
+                            <li>Natural Language Processing</li>
+                            <li>Constraint Programming (Google OR-Tools)</li>
+                            <li>Python for Medical Informatics</li>
+                            <li>DevOps (Docker, Proxmox VE, VMs)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+            <!-- Recognition & Achievements -->
+            <div class="section">
+                <div class="section-title">Recognition & Achievements</div>
+                <ul class="honors-list">
+                    <li>First AI-based triage system deployed in Thailand (2025)</li>
+                    <li>Publications in Nature Scientific Reports, JACEP Open</li>
+                </ul>
+            </div>
+            
+            <!-- Professional Memberships -->
+            <div class="section">
+                <div class="section-title">Professional Memberships</div>
+                <ul class="skill-list">
+                    <li>Emergency Medicine Association of Thailand</li>
+                    <li>Chiang Mai University Medical Alumni Association</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            Last Updated: September 2025
+        </div>
+    </div>
+</body>
+</html>
