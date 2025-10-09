@@ -262,7 +262,8 @@
                         ${project.tags ? `<div class="project-tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>` : ''}
                         <div style="display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap;">
                             ${project.url && project.url !== '#' ? `<a href="${project.url}" target="_blank" class="project-link">Learn more →</a>` : ''}
-                            ${project.demo ? `<a href="${project.demo}" target="_blank" class="project-link" style="background: #059669;">Try Demo →</a>` : ''}
+                            ${project.demo && project.demo !== '#' ? `<a href="${project.demo}" target="_blank" class="project-link">Try Demo →</a>` : ''}
+                            
                         </div>
                     </div>
                 `).join('');
