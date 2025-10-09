@@ -14,8 +14,8 @@ personal:
 contact:
   phone: "+66 98 251 8399"
   email: "patipan.s@cmu.ac.th"
-  location: "Chiang Mai, Thailand"
-  website: "https://spatipan.github.io"
+  # location: "Chiang Mai, Thailand"
+  website: "cv.html"  # Link to full CV or personal website
   line: "https://line.me/ti/p/t0RHTqQY1x"  # LINE contact URL
 
 social:
