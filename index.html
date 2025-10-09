@@ -82,7 +82,7 @@
                     </svg>
                     Full CV
                 </a>
-                 <a id="websiteBtn" class="action-btn" href="" target="_blank">
+                 <a id="lineBtn" class="action-btn" href="" target="_blank">
                     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="10"/>
                         <line x1="2" y1="12" x2="22" y2="12"/>
@@ -289,17 +289,29 @@
                 document.getElementById('photoContainer').innerHTML = `<div class="profile-initials">${initials}</div>`;
             }
 
-            // Contact actions
-            document.getElementById('phoneBtn').href = `tel:${config.contact.phone}`;
-            document.getElementById('emailBtn').href = `mailto:${config.contact.email}`;
-            document.getElementById('locationBtn').href = `https://maps.google.com/?q=${encodeURIComponent(config.contact.location)}`;
-            document.getElementById('websiteBtn').href = config.contact.website;
+            // Contact actions (safely assign hrefs only if elements and data exist)
+            const phoneBtn = document.getElementById('phoneBtn');
+            if (phoneBtn && config.contact && config.contact.phone) phoneBtn.href = `tel:${config.contact.phone}`;
 
-            // LINE button
-            if (config.contact.line) {
+            const emailBtn = document.getElementById('emailBtn');
+            if (emailBtn && config.contact && config.contact.email) emailBtn.href = `mailto:${config.contact.email}`;
+
+            const locationBtn = document.getElementById('locationBtn');
+            if (locationBtn && config.contact && config.contact.location) {
+                locationBtn.href = `https://maps.google.com/?q=${encodeURIComponent(config.contact.location)}`;
+                locationBtn.style.display = 'flex';
+            }
+
+            const websiteBtn = document.getElementById('websiteBtn');
+            if (websiteBtn && config.contact && config.contact.website) websiteBtn.href = config.contact.website;
+
+            // LINE button (may be hidden by default)
+            if (config.contact && config.contact.line) {
                 const lineBtn = document.getElementById('lineBtn');
-                lineBtn.href = config.contact.line;
-                lineBtn.style.display = 'flex';
+                if (lineBtn) {
+                    lineBtn.href = config.contact.line;
+                    lineBtn.style.display = 'flex';
+                }
             }
 
             // Social links
