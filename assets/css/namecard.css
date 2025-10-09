@@ -516,3 +516,95 @@ body {
         border-color: #334155;
     }
 }
+
+/* LINE Button Styling */
+.line-btn {
+    background: #00B900 !important;
+    border-color: #00B900 !important;
+}
+
+.line-btn:hover {
+    background: #009900 !important;
+    border-color: #009900 !important;
+}
+
+/* Collapsible Section Styling */
+.collapsible-section .section-title {
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+}
+
+.collapse-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    color: var(--accent-color);
+}
+
+.collapse-toggle:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 4px;
+}
+
+.collapse-toggle .chevron {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    transition: transform 0.3s ease;
+}
+
+.collapsible-section.collapsed .collapse-toggle .chevron {
+    transform: rotate(-90deg);
+}
+
+.section-content {
+    max-height: 2000px;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.collapsible-section.collapsed .section-content {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* QR Section Subtitle */
+.qr-section-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.qr-section {
+    margin-bottom: 30px;
+}
+
+.qr-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive - Mobile Adjustments */
+@media (max-width: 768px) {
+    .contact-actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .collapsible-section .section-title {
+        font-size: 16px;
+    }
+
+    .qr-section-subtitle {
+        font-size: 14px;
+    }
+}
