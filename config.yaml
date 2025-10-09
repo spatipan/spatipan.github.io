@@ -9,21 +9,20 @@ personal:
   department: "Department of Emergency Medicine"
   tagline: "Bridging emergency medicine with AI innovation"
   bio: "Emergency physician passionate about leveraging AI and technology to improve patient care and healthcare operations."
-  photo: "assets/images/portrait.PNG"  # Path to profile photo
+  photo: "assets/images/profile.jpg"  # Path to profile photo
 
 contact:
   phone: "+66 98 251 8399"
   email: "patipan.s@cmu.ac.th"
   location: "Chiang Mai, Thailand"
-  # website: "https://spatipan.github.io"
+  website: "https://spatipan.github.io"
 
 social:
-  # github: "spatipan"
-# https://www.linkedin.com/in/patipan-sitthiprawiat-14a41a20a/
-  # linkedin: "patipan-sitthiprawiat-14a41a20a"
+  github: "spatipan"
+  linkedin: "patipan-sitthiprawiat-14a41a20a"  # https://www.linkedin.com/in/patipan-sitthiprawiat-14a41a20a/
   twitter: ""  # Add if available
   orcid: "0009-0000-2927-4310"
-  researchgate: "Patipan-Sitthiprawiat" # https://www.researchgate.net/profile/Patipan-Sitthiprawiat?ev=hdr_xprf
+  researchgate: "Patipan-Sitthiprawiat"  # https://www.researchgate.net/profile/Patipan-Sitthiprawiat?ev=hdr_xprf
 
 # Featured projects (max 4 for namecard display)
 projects:
