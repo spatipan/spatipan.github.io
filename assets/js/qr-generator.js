@@ -35,6 +35,48 @@ function initializeWebsiteQRCode(config) {
     }
 }
 
+function initializeLINEQRCode(config) {
+    const qrContainer = document.getElementById('lineQrcode');
+    const lineSection = document.getElementById('lineQrSection');
+
+    if (!config.contact.line) {
+        // Hide LINE QR section if no LINE URL provided
+        if (lineSection) lineSection.style.display = 'none';
+        return;
+    }
+
+    // Show LINE QR section
+    if (lineSection) lineSection.style.display = 'block';
+
+    // Clear existing QR code if any
+    qrContainer.innerHTML = '';
+
+    try {
+        // Get LINE URL
+        const lineURL = config.contact.line;
+
+        // QR code settings
+        const qrSize = config.qr?.size || 200;
+        const fgColor = '#00B900'; // LINE brand color
+        const bgColor = config.qr?.backgroundColor || '#ffffff';
+
+        // Generate QR code
+        const qrcode = new QRCode(qrContainer, {
+            text: lineURL,
+            width: qrSize,
+            height: qrSize,
+            colorDark: fgColor,
+            colorLight: bgColor,
+            correctLevel: QRCode.CorrectLevel.M // Medium error correction (15%)
+        });
+
+        console.log('LINE QR code generated successfully');
+    } catch (error) {
+        console.error('Failed to generate LINE QR code:', error);
+        qrContainer.innerHTML = '<p style="color: #64748b;">QR code generation failed</p>';
+    }
+}
+
 function initializeQRCode(config) {
     const qrContainer = document.getElementById('qrcode');
 

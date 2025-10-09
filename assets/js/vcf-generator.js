@@ -44,6 +44,10 @@ function generateVCF(config) {
         lines.push(`URL:${config.contact.website}`);
     }
 
+    if (config.contact.line) {
+        lines.push(`URL;TYPE=LINE:${config.contact.line}`);
+    }
+
     // Address
     if (config.contact.location) {
         // Format: ;;street;city;state;postal;country
