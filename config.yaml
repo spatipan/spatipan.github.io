@@ -16,6 +16,7 @@ contact:
   email: "patipan.s@cmu.ac.th"
   location: "Chiang Mai, Thailand"
   website: "https://spatipan.github.io"
+  line: "https://line.me/ti/p/t0RHTqQY1x"  # LINE contact URL
 
 social:
   github: "spatipan"
@@ -27,19 +28,19 @@ social:
 # Featured projects (max 4 for namecard display)
 projects:
   - name: "AI-Based Emergency Triage System"
-    description: "First deployed AI triage in Thailand - predicting critical outcomes"
-    tags: ["AI", "Healthcare"]
+    description: "First deployed AI triage in Thailand - predicting critical outcomes with ML and NLP"
+    tags: ["AI", "Triage", "Emergency Medicine", "NLP"]
     url: "https://doi.org/10.1038/s41598-025-17180-1"
     demo: "https://ed-triage-emcmu.streamlit.app"
 
   - name: "Staff Shift Scheduling Optimizer"
     description: "Constraint programming solution for emergency department operations"
-    tags: ["Optimization", "Operations"]
+    tags: ["Optimization", "Shift Scheduling"]
     url: "#"
 
   - name: "Medical Conversation Transcription"
     description: "AI-powered transcription system for emergency department"
-    tags: ["AI", "NLP"]
+    tags: ["AI", "NLP", "Transcription", "ED Administration"]
     url: "#"
 
 # Key skills/expertise (max 8 for namecard)
@@ -78,6 +79,12 @@ card:
   maxProjects: 3
   showSkills: true
   maxSkills: 6
+  # Collapsible sections - set to true to start collapsed
+  collapsible:
+    projects: false      # Projects section starts expanded
+    skills: false        # Skills section starts expanded
+    qrCodes: true        # QR codes start collapsed (reduces clutter)
+    socialLinks: false   # Social links start expanded
 
 # Links
 links:

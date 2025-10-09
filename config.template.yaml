@@ -1,0 +1,89 @@
+# Personal Digital Namecard Configuration Template
+# Copy this file to config.yaml and update with your information
+
+personal:
+  name: "Your Full Name"
+  title: "Your Professional Title"
+  subtitle: "Your Specialization or Secondary Role"
+  organization: "Your Organization/Company"
+  department: "Your Department (optional)"
+  tagline: "Brief tagline or professional summary"
+  bio: "Longer biographical description about your professional focus and expertise"
+  photo: "assets/images/profile.jpg"  # Path to your profile photo
+
+contact:
+  phone: "+1 234 567 8900"
+  email: "your.email@example.com"
+  location: "City, Country"
+  website: "https://yourwebsite.com"
+  line: "https://line.me/ti/p/YOUR_LINE_ID"  # Optional - LINE contact URL
+
+social:
+  github: "yourusername"
+  linkedin: "your-linkedin-id"  # The part after /in/ in your LinkedIn URL
+  twitter: "yourusername"  # Optional
+  orcid: "0000-0000-0000-0000"  # Optional - for academics
+  researchgate: "Your-Name"  # Optional - for academics
+
+# Featured projects (max 4 recommended for namecard display)
+projects:
+  - name: "Project Name"
+    description: "Brief description of the project"
+    tags: ["Tag1", "Tag2", "Tag3"]
+    url: "https://link-to-project-or-publication.com"
+    demo: "https://link-to-demo.com"  # Optional - adds "Try Demo" button
+
+  - name: "Another Project"
+    description: "Description of another project"
+    tags: ["AI", "Web"]
+    url: "#"  # Use "#" if no URL available
+
+# Key skills/expertise (max 8 recommended for namecard)
+skills:
+  - "Skill 1"
+  - "Skill 2"
+  - "Skill 3 (with details if needed)"
+  - "Skill 4"
+  - "Skill 5"
+  - "Skill 6"
+
+# Certifications (select highlights)
+certifications:
+  - "Certification Name 1"
+  - "Certification Name 2"
+  - "Certification Name 3"
+
+# Theme customization
+theme:
+  primaryColor: "#1e293b"      # Dark color for headers
+  accentColor: "#3b82f6"       # Accent color for links and highlights
+  backgroundColor: "#ffffff"    # Background color
+  textColor: "#1a1a1a"         # Main text color
+  font: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+
+# Card settings
+card:
+  showPhoto: true              # Show profile photo
+  showQRCode: true            # Show QR code for vCard
+  showProjects: true          # Show featured projects section
+  maxProjects: 3              # Maximum number of projects to display
+  showSkills: true            # Show skills section
+  maxSkills: 6                # Maximum number of skills to display
+  # Collapsible sections - set to true to start section collapsed
+  collapsible:
+    projects: false           # Projects section (false = starts expanded)
+    skills: false             # Skills section (false = starts expanded)
+    qrCodes: true             # QR codes section (true = starts collapsed)
+    socialLinks: false        # Social links section (false = starts expanded)
+
+# Links
+links:
+  fullCV: "cv.html"           # Link to full CV page
+  publications: "https://scholar.google.com/citations?user=YOUR_ID"  # Google Scholar or similar
+
+# QR Code settings
+qr:
+  size: 200                   # QR code size in pixels
+  includeVCard: true          # Include vCard data in QR code
+  foregroundColor: "#1e293b"  # QR code color
+  backgroundColor: "#ffffff"   # QR code background color
