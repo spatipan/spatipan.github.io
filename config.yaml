@@ -1,0 +1,92 @@
+# Personal Digital Namecard Configuration
+# Update this file to change your namecard information
+
+personal:
+  name: "Patipan Sitthiprawiat, MD"
+  title: "Emergency Medicine Specialist"
+  subtitle: "AI Researcher & Developer"
+  organization: "Chiang Mai University"
+  department: "Department of Emergency Medicine"
+  tagline: "Bridging emergency medicine with AI innovation"
+  bio: "Emergency physician passionate about leveraging AI and technology to improve patient care and healthcare operations."
+  photo: "assets/images/portrait.PNG"  # Path to profile photo
+
+contact:
+  phone: "+66 98 251 8399"
+  email: "patipan.s@cmu.ac.th"
+  location: "Chiang Mai, Thailand"
+  # website: "https://spatipan.github.io"
+
+social:
+  # github: "spatipan"
+# https://www.linkedin.com/in/patipan-sitthiprawiat-14a41a20a/
+  # linkedin: "patipan-sitthiprawiat-14a41a20a"
+  twitter: ""  # Add if available
+  orcid: "0009-0000-2927-4310"
+  researchgate: "Patipan-Sitthiprawiat" # https://www.researchgate.net/profile/Patipan-Sitthiprawiat?ev=hdr_xprf
+
+# Featured projects (max 4 for namecard display)
+projects:
+  - name: "AI-Based Emergency Triage System"
+    description: "First deployed AI triage in Thailand - predicting critical outcomes"
+    tags: ["AI", "Healthcare"]
+    url: "https://doi.org/10.1038/s41598-025-17180-1"
+
+  - name: "Staff Shift Scheduling Optimizer"
+    description: "Constraint programming solution for emergency department operations"
+    tags: ["Optimization", "Operations"]
+    url: "#"
+
+  - name: "Medical Conversation Transcription"
+    description: "AI-powered transcription system for emergency department"
+    tags: ["AI", "NLP"]
+    url: "#"
+
+# Key skills/expertise (max 8 for namecard)
+skills:
+  - "Emergency Medicine"
+  - "Machine Learning (pandas, scikit-learn, scipy)"
+  - "Deep Learning (TensorFlow, Keras, PyTorch)"
+  - "Natural Language Processing (NLP)"
+  - "Constraint Programming (Google OR-Tools)"
+  # - "DevOps (Docker, GitHub Actions)" learning stage
+  - "Clinical Research" 
+  - "Medical Informatics"
+
+# Certifications (select highlights)
+certifications:
+  - "ACLS Instructor"
+  - "BLS Instructor"
+  - "ATLS Provider"
+  - "PALS Provider"
+  - "Wilderness Advanced First Aid (WAFA) provider (WMTC)"
+  - "Tactical Emergency Casualty Care (TECC) provider (Sierra)"
+
+# Theme customization
+theme:
+  primaryColor: "#1e293b"      # Dark slate
+  accentColor: "#3b82f6"       # Blue
+  backgroundColor: "#ffffff"    # White
+  textColor: "#1a1a1a"         # Almost black
+  font: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+
+# Card settings
+card:
+  showPhoto: true
+  showQRCode: true
+  showProjects: true
+  maxProjects: 3
+  showSkills: true
+  maxSkills: 6
+
+# Links
+links:
+  fullCV: "cv.html"
+  publications: "https://scholar.google.com"  # Update with your Google Scholar
+
+# QR Code settings
+qr:
+  size: 200
+  includeVCard: true
+  foregroundColor: "#1e293b"
+  backgroundColor: "#ffffff"
