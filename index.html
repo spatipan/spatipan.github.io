@@ -123,12 +123,14 @@
                     Download Contact Card
                 </button>
 
+                <!-- Disabled: Add to Apple Wallet
                 <button id="addToWallet" class="secondary-btn apple-wallet-btn">
                     <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M21.5 8.5V17c0 1.38-1.12 2.5-2.5 2.5H5c-1.38 0-2.5-1.12-2.5-2.5V8.5h19zM21.5 5v1.5h-19V5c0-1.38 1.12-2.5 2.5-2.5h14c1.38 0 2.5 1.12 2.5 2.5z"/>
                     </svg>
                     Add to Apple Wallet
                 </button>
+                -->
 
                 <button id="shareBtn" class="secondary-btn">
                     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -290,10 +292,10 @@
                 downloadVCF(vcf, `${config.personal.name.replace(/\s+/g, '_')}.vcf`);
             });
 
-            // Add to Wallet
-            document.getElementById('addToWallet').addEventListener('click', () => {
-                addToAppleWallet(config);
-            });
+            // Disabled: Add to Wallet
+            // document.getElementById('addToWallet').addEventListener('click', () => {
+            //     addToAppleWallet(config);
+            // });
 
             // Share
             document.getElementById('shareBtn').addEventListener('click', async () => {
