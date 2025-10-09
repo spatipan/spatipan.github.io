@@ -105,7 +105,14 @@
                 </div>
             </div>
 
-            <!-- QR Code Section -->
+            <!-- QR Code Section for Website -->
+            <div id="websiteQrSection" class="qr-section">
+                <h2 class="section-title">Visit My Website</h2>
+                <div id="websiteQrcode" class="qr-code"></div>
+                <p class="qr-hint">Scan to visit spatipan.github.io</p>
+            </div>
+
+            <!-- QR Code Section for vCard -->
             <div id="qrSection" class="qr-section">
                 <h2 class="section-title">Scan to Save Contact</h2>
                 <div id="qrcode" class="qr-code"></div>
@@ -182,6 +189,7 @@
 
                 // Initialize features
                 initializeQRCode(config);
+                initializeWebsiteQRCode(config);
                 initializeButtons(config);
 
                 // Hide loading, show app
@@ -252,7 +260,10 @@
                         <h3 class="project-name">${project.name}</h3>
                         <p class="project-desc">${project.description}</p>
                         ${project.tags ? `<div class="project-tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>` : ''}
-                        ${project.url && project.url !== '#' ? `<a href="${project.url}" target="_blank" class="project-link">Learn more →</a>` : ''}
+                        <div style="display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap;">
+                            ${project.url && project.url !== '#' ? `<a href="${project.url}" target="_blank" class="project-link">Learn more →</a>` : ''}
+                            ${project.demo ? `<a href="${project.demo}" target="_blank" class="project-link" style="background: #059669;">Try Demo →</a>` : ''}
+                        </div>
                     </div>
                 `).join('');
             } else {

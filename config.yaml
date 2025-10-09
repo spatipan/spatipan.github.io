@@ -30,6 +30,7 @@ projects:
     description: "First deployed AI triage in Thailand - predicting critical outcomes"
     tags: ["AI", "Healthcare"]
     url: "https://doi.org/10.1038/s41598-025-17180-1"
+    demo: "https://ed-triage-emcmu.streamlit.app"
 
   - name: "Staff Shift Scheduling Optimizer"
     description: "Constraint programming solution for emergency department operations"

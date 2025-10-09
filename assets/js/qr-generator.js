@@ -1,7 +1,39 @@
 /**
  * QR Code Generator
- * Generates QR codes containing vCard data
+ * Generates QR codes containing vCard data and website URLs
  */
+
+function initializeWebsiteQRCode(config) {
+    const qrContainer = document.getElementById('websiteQrcode');
+
+    // Clear existing QR code if any
+    qrContainer.innerHTML = '';
+
+    try {
+        // Get website URL
+        const websiteURL = config.contact.website || 'https://spatipan.github.io';
+
+        // QR code settings
+        const qrSize = config.qr?.size || 200;
+        const fgColor = config.qr?.foregroundColor || '#1e293b';
+        const bgColor = config.qr?.backgroundColor || '#ffffff';
+
+        // Generate QR code
+        const qrcode = new QRCode(qrContainer, {
+            text: websiteURL,
+            width: qrSize,
+            height: qrSize,
+            colorDark: fgColor,
+            colorLight: bgColor,
+            correctLevel: QRCode.CorrectLevel.M // Medium error correction (15%)
+        });
+
+        console.log('Website QR code generated successfully');
+    } catch (error) {
+        console.error('Failed to generate website QR code:', error);
+        qrContainer.innerHTML = '<p style="color: #64748b;">QR code generation failed</p>';
+    }
+}
 
 function initializeQRCode(config) {
     const qrContainer = document.getElementById('qrcode');
