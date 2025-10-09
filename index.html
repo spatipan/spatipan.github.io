@@ -82,41 +82,97 @@
                     </svg>
                     Website
                 </a>
+                <a id="lineBtn" class="action-btn line-btn" href="" target="_blank" style="display: none;">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.105.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+                    </svg>
+                    LINE
+                </a>
             </div>
 
             <!-- Social Links -->
-            <div id="socialLinks" class="social-links">
-                <!-- Loaded dynamically -->
+            <div id="socialLinksSection" class="section collapsible-section">
+                <h2 class="section-title">
+                    <span>Connect With Me</span>
+                    <button class="collapse-toggle" aria-label="Toggle section">
+                        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                </h2>
+                <div class="section-content">
+                    <div id="socialLinks" class="social-links">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
             </div>
 
             <!-- Featured Projects -->
-            <div id="projectsSection" class="section">
-                <h2 class="section-title">Featured Projects</h2>
-                <div id="projectsList" class="projects-list">
-                    <!-- Loaded dynamically -->
+            <div id="projectsSection" class="section collapsible-section">
+                <h2 class="section-title">
+                    <span>Featured Projects</span>
+                    <button class="collapse-toggle" aria-label="Toggle section">
+                        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                </h2>
+                <div class="section-content">
+                    <div id="projectsList" class="projects-list">
+                        <!-- Loaded dynamically -->
+                    </div>
                 </div>
             </div>
 
             <!-- Skills -->
-            <div id="skillsSection" class="section">
-                <h2 class="section-title">Expertise</h2>
-                <div id="skillsList" class="skills-list">
-                    <!-- Loaded dynamically -->
+            <div id="skillsSection" class="section collapsible-section">
+                <h2 class="section-title">
+                    <span>Expertise</span>
+                    <button class="collapse-toggle" aria-label="Toggle section">
+                        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                </h2>
+                <div class="section-content">
+                    <div id="skillsList" class="skills-list">
+                        <!-- Loaded dynamically -->
+                    </div>
                 </div>
             </div>
 
-            <!-- QR Code Section for Website -->
-            <div id="websiteQrSection" class="qr-section">
-                <h2 class="section-title">Visit My Website</h2>
-                <div id="websiteQrcode" class="qr-code"></div>
-                <p class="qr-hint">Scan to visit spatipan.github.io</p>
-            </div>
+            <!-- QR Codes Section -->
+            <div id="qrCodesSection" class="section collapsible-section">
+                <h2 class="section-title">
+                    <span>QR Codes</span>
+                    <button class="collapse-toggle" aria-label="Toggle section">
+                        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                </h2>
+                <div class="section-content">
+                    <!-- QR Code for Website -->
+                    <div id="websiteQrSection" class="qr-section">
+                        <h3 class="qr-section-subtitle">Visit My Website</h3>
+                        <div id="websiteQrcode" class="qr-code"></div>
+                        <p class="qr-hint">Scan to visit spatipan.github.io</p>
+                    </div>
 
-            <!-- QR Code Section for vCard -->
-            <div id="qrSection" class="qr-section">
-                <h2 class="section-title">Scan to Save Contact</h2>
-                <div id="qrcode" class="qr-code"></div>
-                <p class="qr-hint">Scan with your phone camera</p>
+                    <!-- QR Code for LINE -->
+                    <div id="lineQrSection" class="qr-section" style="display: none;">
+                        <h3 class="qr-section-subtitle">Add on LINE</h3>
+                        <div id="lineQrcode" class="qr-code"></div>
+                        <p class="qr-hint">Scan to add on LINE</p>
+                    </div>
+
+                    <!-- QR Code for vCard -->
+                    <div id="qrSection" class="qr-section">
+                        <h3 class="qr-section-subtitle">Save Contact</h3>
+                        <div id="qrcode" class="qr-code"></div>
+                        <p class="qr-hint">Scan with your phone camera</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Action Buttons -->
@@ -190,7 +246,9 @@
                 // Initialize features
                 initializeQRCode(config);
                 initializeWebsiteQRCode(config);
+                initializeLINEQRCode(config);
                 initializeButtons(config);
+                initializeCollapsible(config);
 
                 // Hide loading, show app
                 document.getElementById('loading').style.display = 'none';
@@ -234,6 +292,13 @@
             document.getElementById('emailBtn').href = `mailto:${config.contact.email}`;
             document.getElementById('locationBtn').href = `https://maps.google.com/?q=${encodeURIComponent(config.contact.location)}`;
             document.getElementById('websiteBtn').href = config.contact.website;
+
+            // LINE button
+            if (config.contact.line) {
+                const lineBtn = document.getElementById('lineBtn');
+                lineBtn.href = config.contact.line;
+                lineBtn.style.display = 'flex';
+            }
 
             // Social links
             const socialContainer = document.getElementById('socialLinks');
@@ -325,6 +390,41 @@
                     // Fallback: copy URL
                     navigator.clipboard.writeText(window.location.href);
                     alert('Link copied to clipboard!');
+                }
+            });
+        }
+
+        function initializeCollapsible(config) {
+            // Get collapsible settings from config
+            const collapsibleSettings = config.card?.collapsible || {};
+
+            // Map section IDs to their config keys
+            const sectionMap = {
+                'socialLinksSection': 'socialLinks',
+                'projectsSection': 'projects',
+                'skillsSection': 'skills',
+                'qrCodesSection': 'qrCodes'
+            };
+
+            // Initialize each collapsible section
+            Object.keys(sectionMap).forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (!section) return;
+
+                const configKey = sectionMap[sectionId];
+                const shouldCollapse = collapsibleSettings[configKey] || false;
+
+                // Set initial state
+                if (shouldCollapse) {
+                    section.classList.add('collapsed');
+                }
+
+                // Add click handler to toggle button
+                const toggleBtn = section.querySelector('.collapse-toggle');
+                if (toggleBtn) {
+                    toggleBtn.addEventListener('click', () => {
+                        section.classList.toggle('collapsed');
+                    });
                 }
             });
         }
