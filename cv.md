@@ -20,6 +20,7 @@ Contact & online profiles
 - GitHub: https://github.com/spatipan
 - LinkedIn: https://www.linkedin.com/in/patipan-sitthiprawiat-14a41a20a/
 - ORCID: https://orcid.org/0009-0000-2927-4310
+- Scopus: https://www.scopus.com/authid/detail.uri?authorId=57223017245
 - ResearchGate: https://www.researchgate.net/profile/Patipan-Sitthiprawiat
 
 Core academic & clinical appointments
@@ -42,7 +43,9 @@ All links point to DOI or PubMed when available. If you prefer a numbered biblio
 
 - Sitthiprawiat P, Wittayachamnankul B, Laohakul P. Multimodal management of refractory ventricular tachycardia due to aconitine poisoning: A case report in a resource-limited setting. JACEP Open. 2025;6(4):100171. DOI: https://doi.org/10.1016/j.acepjo.2025.100171 · PubMed: https://pubmed.ncbi.nlm.nih.gov/40574793/
 
-- Jiradechpitak U, Tangsuwanaruk T, Sitthiprawiat P, Wittayachamnankul B. Comparison of hydrocortisone 100 mg bolus plus 200 mg/day infusion vs. infusion alone in refractory septic shock. Journal of Intensive Medicine. 2025. (Please provide DOI or link if available.)
+- Jiradechpitak U, Tangsuwanaruk T, Sitthiprawiat P, Wittayachamnankul B. Comparison of hydrocortisone 100 mg bolus plus 200 mg/day infusion vs. infusion alone in refractory septic shock. Journal of Intensive Medicine. 2025;5(4):344-349. DOI: https://doi.org/10.1016/j.jointm.2025.02.002 · PubMed: https://pubmed.ncbi.nlm.nih.gov/41180100/
+
+- Laosuksri W, Bunma N, Sitthiprawiat P, Wongtanasarasin W. Factors associated with emergency department discharge among patients triaged as resuscitation (CTAS level 1): a retrospective cross-sectional study. BMC Emergency Medicine. 2026;26:91. DOI: https://doi.org/10.1186/s12873-026-01507-w
 
 - Hiranwong T, Sitthiprawiat P, Siritikul S, et al. Mental strength and challenges among Thai medical students in their clinical years—Study protocol. Healthcare. 2021;9(3):305. DOI: https://doi.org/10.3390/healthcare9030305 · PubMed: https://pubmed.ncbi.nlm.nih.gov/33801800/
 
@@ -77,6 +80,9 @@ Technical skills
 - Optimization: Constraint Programming (Google OR-Tools)
 - DevOps & deployment: Docker, containerized services, VM management
 - Languages & tools: Python, Git/GitHub
+
+Research grants
+- Faculty of Medicine, Chiang Mai University Research Fund — Grant No. INV08/2567 (2024). Supporting the AI-based emergency triage model study (Scientific Reports, 2025).
 
 Teaching, supervision & service
 - Medical student teaching, clinical supervision, and assessment (Department of Emergency Medicine) — please provide details of courses taught, years, and student roles supervised if you'd like them included.
