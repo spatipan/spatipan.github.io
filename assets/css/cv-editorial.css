@@ -1,0 +1,359 @@
+:root {
+    --cv-ink: #171714;
+    --cv-paper: #f4f1ea;
+    --cv-muted: #66645f;
+    --cv-rule: #c9c4ba;
+    --cv-signal: #a33129;
+    --cv-serif: "Newsreader", Georgia, serif;
+    --cv-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+    padding: 0;
+    background: var(--cv-paper);
+    color: var(--cv-ink);
+    font-family: var(--cv-sans);
+}
+
+.back-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: min(100% - 40px, 1000px);
+    min-height: 64px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--cv-ink);
+    background: rgba(244, 241, 234, 0.94);
+    backdrop-filter: blur(12px);
+}
+
+.back-nav a,
+.print-button {
+    color: var(--cv-ink);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.back-nav a:hover {
+    color: var(--cv-signal);
+    text-decoration: none;
+}
+
+.back-nav a svg {
+    width: 16px;
+    height: 16px;
+}
+
+.print-button {
+    padding: 8px 0;
+    border: 0;
+    border-bottom: 1px solid transparent;
+    background: transparent;
+    cursor: pointer;
+}
+
+.print-button:hover {
+    border-bottom-color: currentColor;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 36px auto 80px;
+    background: #fffef9;
+    box-shadow: 0 18px 60px rgba(23, 23, 20, 0.08);
+}
+
+.header {
+    padding: 58px 64px 52px;
+    border-bottom: 6px solid var(--cv-signal);
+    background: var(--cv-ink);
+    color: #fffef9;
+    text-align: left;
+}
+
+.header-kicker {
+    margin-bottom: 34px;
+    color: #c8c3ba;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.header h1 {
+    max-width: 760px;
+    margin-bottom: 18px;
+    font-family: var(--cv-serif);
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: -0.035em;
+    line-height: 0.95;
+}
+
+.header .subtitle {
+    margin-bottom: 8px;
+    color: #fffef9;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.header .institution {
+    max-width: 620px;
+    color: #c8c3ba;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.content {
+    padding: 52px 64px;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    column-gap: 42px;
+    margin-bottom: 38px;
+}
+
+.section-title {
+    margin: 0;
+    padding: 3px 0 0;
+    border: 0;
+    color: var(--cv-signal);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+}
+
+.section > :not(.section-title) {
+    grid-column: 2;
+}
+
+.section > .section-title + * {
+    grid-row: 1;
+}
+
+.section p,
+.education-details,
+.authors,
+.project-role,
+.skill-list li,
+.cert-list li,
+.honors-list li,
+.research-item,
+.language-item,
+.contact-item {
+    color: #3e3d39;
+}
+
+.contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 28px;
+    margin: 0;
+}
+
+.contact-item {
+    gap: 0;
+    font-size: 12px;
+}
+
+.contact-icon {
+    display: none;
+}
+
+.education-item,
+.publication-item,
+.cert-item {
+    margin-bottom: 18px;
+}
+
+.education-title,
+.project-title,
+.skill-category-title,
+.cert-category-title {
+    color: var(--cv-ink);
+}
+
+.publication-item,
+.research-item {
+    padding: 0 0 18px;
+    border-bottom: 1px solid #ddd8ce;
+    font-size: 12px;
+}
+
+.publication-item::before,
+.research-item::before,
+.skill-list li::before,
+.cert-list li::before,
+.honors-list li::before {
+    display: none;
+}
+
+.publication-title {
+    margin: 4px 0;
+    color: var(--cv-ink);
+    font-family: var(--cv-serif);
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1.25;
+}
+
+.journal {
+    color: var(--cv-muted);
+}
+
+.research-item {
+    margin-bottom: 18px;
+}
+
+.skills-grid,
+.cert-grid {
+    gap: 24px;
+}
+
+.skill-list li,
+.cert-list li,
+.honors-list li {
+    padding: 3px 0;
+}
+
+a {
+    color: var(--cv-signal);
+}
+
+.footer {
+    padding: 24px 64px;
+    border-top: 1px solid var(--cv-rule);
+    background: #fffef9;
+    color: var(--cv-muted);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+    .back-nav {
+        width: calc(100% - 32px);
+        padding: 0;
+    }
+
+    .container {
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .header {
+        padding: 42px 22px 36px;
+    }
+
+    .header-kicker {
+        margin-bottom: 26px;
+    }
+
+    .header h1 {
+        font-size: 36px;
+    }
+
+    .content {
+        padding: 38px 22px;
+    }
+
+    .section {
+        display: block;
+        margin-bottom: 36px;
+    }
+
+    .section-title {
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--cv-rule);
+    }
+
+    .contact-grid,
+    .skills-grid,
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        padding: 20px 22px;
+    }
+}
+
+@media print {
+    @page {
+        margin: 1.25cm;
+    }
+
+    body,
+    .container,
+    .footer {
+        background: white;
+    }
+
+    .back-nav {
+        display: none !important;
+    }
+
+    .container {
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .header {
+        padding: 32px 38px 28px;
+        border-bottom-width: 3px;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .header-kicker {
+        margin-bottom: 18px;
+    }
+
+    .header h1 {
+        font-size: 34px;
+    }
+
+    .content {
+        padding: 32px 38px;
+    }
+
+    .section {
+        grid-template-columns: 145px minmax(0, 1fr);
+        column-gap: 28px;
+        margin-bottom: 24px;
+        break-inside: auto;
+    }
+
+    .education-item,
+    .publication-item,
+    .research-item,
+    .cert-category,
+    .skill-category {
+        break-inside: avoid;
+    }
+
+    .publication-item,
+    .research-item {
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+    }
+
+    a {
+        color: var(--cv-ink);
+    }
+
+    .footer {
+        padding: 18px 38px;
+    }
+}

@@ -1,445 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Digital business card - Patipan Sitthiprawiat, MD">
-    <meta name="theme-color" content="#1e293b">
-
-    <!-- Apple Meta Tags -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Patipan Sitthiprawiat, MD - Digital Namecard">
-    <meta property="og:description" content="Emergency Physician & AI Researcher">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Patipan Sitthiprawiat, MD — emergency physician and clinical AI researcher at Chiang Mai University.">
+    <meta name="theme-color" content="#f4f1ea">
+    <meta property="og:title" content="Patipan Sitthiprawiat, MD">
+    <meta property="og:description" content="Emergency physician translating clinical problems into evidence-based AI systems.">
     <meta property="og:type" content="profile">
+    <meta property="og:image" content="https://spatipan.github.io/assets/images/portrait-studio.webp">
+    <title>Patipan Sitthiprawiat, MD — Emergency Physician &amp; AI Researcher</title>
 
-    <title>Patipan Sitthiprawiat - Digital Namecard</title>
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/namecard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/editorial.css">
 </head>
 <body>
-    <!-- Loading State -->
-    <div id="loading" class="loading">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div id="loading" class="loading" role="status" aria-live="polite">
         <div class="spinner"></div>
+        <span>Loading profile</span>
     </div>
 
-    <!-- Main Card Container -->
-    <div id="app" class="app-container" style="display: none;">
-        <!-- Namecard -->
-        <div class="namecard">
-            <!-- Header Section -->
-            <div class="card-header">
-                <div class="profile-section">
-                    <div class="profile-photo-container" id="photoContainer">
-                        <!-- Photo loaded dynamically -->
-                    </div>
+    <div id="app" class="site" style="display: none;">
+        <header class="site-header">
+            <a class="wordmark" href="index.html" aria-label="Patipan Sitthiprawiat home">
+                <span class="wordmark-mark">PS</span>
+                <span>Patipan Sitthiprawiat, MD</span>
+            </a>
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a href="#work">Selected work</a>
+                <a href="cv.html">Academic CV</a>
+            </nav>
+        </header>
+
+        <main id="main">
+            <section class="hero" aria-labelledby="name">
+                <div class="hero-copy">
+                    <p class="eyebrow">Emergency medicine × clinical AI</p>
                     <div class="profile-info">
                         <h1 id="name" class="name"></h1>
-                        <p id="title" class="title"></p>
-                        <p id="subtitle" class="subtitle"></p>
+                        <p class="role"><span id="title"></span> · <span id="subtitle"></span></p>
                         <p id="organization" class="organization"></p>
                     </div>
-                </div>
-                <p id="tagline" class="tagline"></p>
-            </div>
+                    <p id="tagline" class="tagline"></p>
+                    <p class="hero-summary">I translate frontline clinical problems into researched, validated, and deployable systems for safer emergency care.</p>
 
-            <!-- Contact Actions -->
-            <div class="contact-actions">
-                <a id="phoneBtn" class="action-btn" href="">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                    </svg>
-                    Call
-                </a>
-                <a id="emailBtn" class="action-btn" href="">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                        <polyline points="22,6 12,13 2,6"/>
-                    </svg>
-                    Email
-                </a>
-                <!-- <a id="locationBtn" class="action-btn" href="">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                        <circle cx="12" cy="10" r="3"/>
-                    </svg>
-                    Location
-                </a> -->
-                <a id="websiteBtn" class="action-btn" href="" target="_blank">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <line x1="2" y1="12" x2="22" y2="12"/>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                    </svg>
-                    Full CV
-                </a>
-                 <a id="lineBtn" class="action-btn" href="" target="_blank">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <line x1="2" y1="12" x2="22" y2="12"/>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                    </svg>
-                    LINE
-                </a>
-            </div>
-
-            <!-- Social Links -->
-            <div id="socialLinksSection" class="section collapsible-section">
-                <h2 class="section-title">
-                    <span>Connect With Me</span>
-                    <button class="collapse-toggle" aria-label="Toggle section">
-                        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                </h2>
-                <div class="section-content">
-                    <div id="socialLinks" class="social-links">
-                        <!-- Loaded dynamically -->
+                    <div class="hero-actions" aria-label="Contact and profile links">
+                        <a id="emailBtn" class="primary-btn" href="">Start a conversation <span aria-hidden="true">↗</span></a>
+                        <a id="viewFullCV" class="text-link" href="cv.html">Academic CV <span aria-hidden="true">→</span></a>
                     </div>
                 </div>
-            </div>
 
-            <!-- Featured Projects -->
-            <div id="projectsSection" class="section collapsible-section">
-                <h2 class="section-title">
-                    <span>Featured Projects</span>
-                    <button class="collapse-toggle" aria-label="Toggle section">
-                        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                </h2>
-                <div class="section-content">
-                    <div id="projectsList" class="projects-list">
-                        <!-- Loaded dynamically -->
-                    </div>
+                <figure class="portrait-frame">
+                    <div id="photoContainer" class="profile-photo-container"></div>
+                    <figcaption>Chiang Mai, Thailand <span>2025</span></figcaption>
+                </figure>
+            </section>
+
+            <section class="evidence" aria-label="Professional highlights">
+                <div class="evidence-item">
+                    <strong>CMU</strong>
+                    <span>Faculty of Medicine<br>Chiang Mai University</span>
                 </div>
-            </div>
-
-            <!-- Skills -->
-            <div id="skillsSection" class="section collapsible-section">
-                <h2 class="section-title">
-                    <span>Expertise</span>
-                    <button class="collapse-toggle" aria-label="Toggle section">
-                        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                </h2>
-                <div class="section-content">
-                    <div id="skillsList" class="skills-list">
-                        <!-- Loaded dynamically -->
-                    </div>
+                <div class="evidence-item">
+                    <strong>6</strong>
+                    <span>Selected peer-reviewed<br>publications</span>
                 </div>
-            </div>
+                <div class="evidence-item">
+                    <strong>01</strong>
+                    <span>Published clinical AI<br>triage system</span>
+                </div>
+            </section>
 
-            <!-- QR Codes Section -->
-            <div id="qrCodesSection" class="section collapsible-section">
+            <section id="work" class="section work-section">
+                <div class="section-heading">
+                    <p class="section-index">01 / Selected work</p>
+                    <h2>Evidence before<br><em>ambition.</em></h2>
+                    <p>Research and systems grounded in real emergency department needs.</p>
+                </div>
+                <div id="projectsSection" class="section-body">
+                    <div id="projectsList" class="projects-list"></div>
+                </div>
+            </section>
+
+            <section id="skillsSection" class="section expertise-section">
+                <div class="section-heading">
+                    <p class="section-index">02 / Practice</p>
+                    <h2>One practice,<br><em>two disciplines.</em></h2>
+                </div>
+                <div class="section-body">
+                    <p class="practice-intro">Clinical judgement defines the problem. Research methods test the claim. Engineering makes the result useful.</p>
+                    <div id="skillsList" class="skills-list"></div>
+                </div>
+            </section>
+
+            <section id="socialLinksSection" class="section profiles-section">
+                <div class="section-heading">
+                    <p class="section-index">03 / Verification</p>
+                    <h2>Find the<br><em>record.</em></h2>
+                </div>
+                <div class="section-body">
+                    <p class="practice-intro">Review my research identity, source code, and professional history on independent platforms.</p>
+                    <div id="socialLinks" class="social-links"></div>
+                </div>
+            </section>
+
+            <section class="contact-panel">
+                <p class="eyebrow">Research · Clinical systems · Collaboration</p>
+                <h2>Let’s work on problems<br>that matter in practice.</h2>
+                <div class="contact-links">
+                    <a id="phoneBtn" href="">Call</a>
+                    <a class="email-clone" href="mailto:patipan.s@cmu.ac.th">patipan.s@cmu.ac.th</a>
+                    <a id="lineBtn" href="" target="_blank" rel="noopener">LINE</a>
+                </div>
+            </section>
+
+            <section id="qrCodesSection" class="utility-section collapsible-section collapsed">
                 <h2 class="section-title">
-                    <span>QR Codes</span>
-                    <button class="collapse-toggle" aria-label="Toggle section">
-                        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
+                    <span>Contact utilities</span>
+                    <button class="collapse-toggle" type="button" aria-label="Toggle contact utilities" aria-expanded="false">
+                        <span>QR codes</span><span class="chevron" aria-hidden="true">↓</span>
                     </button>
                 </h2>
                 <div class="section-content">
-                    <!-- QR Code for Website -->
                     <div id="websiteQrSection" class="qr-section">
-                        <h3 class="qr-section-subtitle">Visit My Website</h3>
+                        <h3 class="qr-section-subtitle">Academic CV</h3>
                         <div id="websiteQrcode" class="qr-code"></div>
-                        <p class="qr-hint">Scan to visit spatipan.github.io</p>
+                        <p class="qr-hint">Scan to open the CV</p>
                     </div>
-
-                    <!-- QR Code for LINE -->
-                    <div id="lineQrSection" class="qr-section" style="display: none;">
-                        <h3 class="qr-section-subtitle">Add on LINE</h3>
+                    <div id="lineQrSection" class="qr-section">
+                        <h3 class="qr-section-subtitle">LINE</h3>
                         <div id="lineQrcode" class="qr-code"></div>
-                        <p class="qr-hint">Scan to add on LINE</p>
+                        <p class="qr-hint">Scan to connect on LINE</p>
                     </div>
-
-                    <!-- QR Code for vCard -->
                     <div id="qrSection" class="qr-section">
-                        <h3 class="qr-section-subtitle">Save Contact</h3>
+                        <h3 class="qr-section-subtitle">Contact card</h3>
                         <div id="qrcode" class="qr-code"></div>
-                        <p class="qr-hint">Scan with your phone camera</p>
+                        <p class="qr-hint">Scan to save contact details</p>
                     </div>
                 </div>
+            </section>
+
+            <div class="action-buttons" aria-label="Profile utilities">
+                <button id="downloadVCF" class="utility-button" type="button">Download contact card</button>
+                <button id="shareBtn" class="utility-button" type="button">Share profile</button>
+                <a id="websiteBtn" class="utility-button" href="cv.html">Open full CV</a>
             </div>
+        </main>
 
-            <!-- Action Buttons -->
-            <div class="action-buttons">
-                <button id="downloadVCF" class="primary-btn">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                        <polyline points="7 10 12 15 17 10"/>
-                        <line x1="12" y1="15" x2="12" y2="3"/>
-                    </svg>
-                    Download Contact Card
-                </button>
-
-                <!-- Disabled: Add to Apple Wallet
-                <button id="addToWallet" class="secondary-btn apple-wallet-btn">
-                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M21.5 8.5V17c0 1.38-1.12 2.5-2.5 2.5H5c-1.38 0-2.5-1.12-2.5-2.5V8.5h19zM21.5 5v1.5h-19V5c0-1.38 1.12-2.5 2.5-2.5h14c1.38 0 2.5 1.12 2.5 2.5z"/>
-                    </svg>
-                    Add to Apple Wallet
-                </button>
-                -->
-
-                <button id="shareBtn" class="secondary-btn">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="18" cy="5" r="3"/>
-                        <circle cx="6" cy="12" r="3"/>
-                        <circle cx="18" cy="19" r="3"/>
-                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
-                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-                    </svg>
-                    Share
-                </button>
-
-                <a id="viewFullCV" href="cv.html" class="secondary-btn">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                        <polyline points="14 2 14 8 20 8"/>
-                        <line x1="16" y1="13" x2="8" y2="13"/>
-                        <line x1="16" y1="17" x2="8" y2="17"/>
-                        <polyline points="10 9 9 9 8 9"/>
-                    </svg>
-                    View Full CV
-                </a>
-            </div>
-        </div>
-
-        <!-- Footer -->
         <footer class="footer">
-            <p>Last updated: <span id="lastUpdated"></span></p>
-            <p>Powered by <a href="https://github.com/spatipan/spatipan.github.io" target="_blank">GitHub Pages</a></p>
+            <p>© <span id="lastUpdated"></span> Patipan Sitthiprawiat</p>
+            <p>Emergency Medicine · Chiang Mai University</p>
         </footer>
     </div>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
     <script src="assets/js/config-loader.js"></script>
     <script src="assets/js/vcf-generator.js"></script>
     <script src="assets/js/qr-generator.js"></script>
-    <script src="assets/js/wallet-integration.js"></script>
     <script>
-        // Main App Initialization
         document.addEventListener('DOMContentLoaded', async () => {
             try {
-                // Load configuration
                 const config = await loadConfig();
-
-                // Populate card
-                populateCard(config);
-
-                // Initialize features
+                populatePage(config);
                 initializeQRCode(config);
                 initializeWebsiteQRCode(config);
                 initializeLINEQRCode(config);
                 initializeButtons(config);
                 initializeCollapsible(config);
-
-                // Hide loading, show app
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('app').style.display = 'block';
-
             } catch (error) {
-                console.error('Failed to initialize app:', error);
-                document.getElementById('loading').innerHTML = '<p>Failed to load namecard. Please refresh the page.</p>';
+                console.error('Failed to initialize profile:', error);
+                document.getElementById('loading').innerHTML = '<p>Unable to load the profile. Please refresh the page.</p>';
             }
         });
 
-        function populateCard(config) {
-            // Personal info
-            document.getElementById('name').textContent = config.personal.name;
-            document.getElementById('title').textContent = config.personal.title;
-            document.getElementById('subtitle').textContent = config.personal.subtitle;
-            document.getElementById('organization').textContent = config.personal.organization;
-            document.getElementById('tagline').textContent = config.personal.tagline;
+        function populatePage(config) {
+            const personal = config.personal;
+            document.getElementById('name').textContent = personal.name;
+            document.getElementById('title').textContent = personal.title;
+            document.getElementById('subtitle').textContent = personal.subtitle;
+            document.getElementById('organization').textContent = personal.organization;
+            document.getElementById('tagline').textContent = personal.tagline;
 
-            // Profile photo
-            if (config.card.showPhoto && config.personal.photo) {
-                const photoContainer = document.getElementById('photoContainer');
-                const img = document.createElement('img');
-                img.src = config.personal.photo;
-                img.alt = config.personal.name;
-                img.className = 'profile-photo';
-                img.onerror = () => {
-                    // Fallback to initials
-                    const initials = config.personal.name.split(' ').map(n => n[0]).join('');
-                    photoContainer.innerHTML = `<div class="profile-initials">${initials}</div>`;
-                };
-                photoContainer.appendChild(img);
-            } else {
-                // Show initials
-                const initials = config.personal.name.split(' ').map(n => n[0]).join('');
-                document.getElementById('photoContainer').innerHTML = `<div class="profile-initials">${initials}</div>`;
-            }
+            const photoContainer = document.getElementById('photoContainer');
+            const image = document.createElement('img');
+            image.src = 'assets/images/portrait-studio.webp';
+            image.alt = `Portrait of ${personal.name}`;
+            image.className = 'profile-photo';
+            image.width = 1086;
+            image.height = 1448;
+            image.fetchPriority = 'high';
+            photoContainer.appendChild(image);
 
-            // Contact actions (safely assign hrefs only if elements and data exist)
-            const phoneBtn = document.getElementById('phoneBtn');
-            if (phoneBtn && config.contact && config.contact.phone) phoneBtn.href = `tel:${config.contact.phone}`;
+            document.getElementById('phoneBtn').href = `tel:${config.contact.phone}`;
+            document.getElementById('emailBtn').href = `mailto:${config.contact.email}`;
+            document.querySelector('.email-clone').href = `mailto:${config.contact.email}`;
+            document.querySelector('.email-clone').textContent = config.contact.email;
+            document.getElementById('websiteBtn').href = config.links?.fullCV || 'cv.html';
+            document.getElementById('viewFullCV').href = config.links?.fullCV || 'cv.html';
 
-            const emailBtn = document.getElementById('emailBtn');
-            if (emailBtn && config.contact && config.contact.email) emailBtn.href = `mailto:${config.contact.email}`;
+            const lineButton = document.getElementById('lineBtn');
+            if (config.contact.line) lineButton.href = config.contact.line;
+            else lineButton.hidden = true;
 
-            const locationBtn = document.getElementById('locationBtn');
-            if (locationBtn && config.contact && config.contact.location) {
-                locationBtn.href = `https://maps.google.com/?q=${encodeURIComponent(config.contact.location)}`;
-                locationBtn.style.display = 'flex';
-            }
-
-            const websiteBtn = document.getElementById('websiteBtn');
-            if (websiteBtn && config.contact && config.contact.website) websiteBtn.href = config.contact.website;
-
-            // LINE button (may be hidden by default)
-            if (config.contact && config.contact.line) {
-                const lineBtn = document.getElementById('lineBtn');
-                if (lineBtn) {
-                    lineBtn.href = config.contact.line;
-                    lineBtn.style.display = 'flex';
-                }
-            }
-
-            // Social links
-            const socialContainer = document.getElementById('socialLinks');
-            const socials = [];
-            if (config.social.github) socials.push({ name: 'GitHub', url: `https://github.com/${config.social.github}`, icon: 'github' });
-            if (config.social.linkedin) socials.push({ name: 'LinkedIn', url: `https://linkedin.com/in/${config.social.linkedin}`, icon: 'linkedin' });
-            if (config.social.twitter) socials.push({ name: 'Twitter', url: `https://twitter.com/${config.social.twitter}`, icon: 'twitter' });
-            if (config.social.orcid) socials.push({ name: 'ORCID', url: `https://orcid.org/${config.social.orcid}`, icon: 'orcid' });
-            if (config.social.researchgate) socials.push({ name: 'ResearchGate', url: `https://www.researchgate.net/profile/${config.social.researchgate}`, icon: 'researchgate' });
-
-            socialContainer.innerHTML = socials.map(social => `
-                <a href="${social.url}" target="_blank" class="social-link" title="${social.name}">
-                    <span class="social-icon">${getSocialIcon(social.icon)}</span>
-                    ${social.name}
-                </a>
-            `).join('');
-
-            // Projects
             if (config.card.showProjects && config.projects) {
-                const projectsList = document.getElementById('projectsList');
-                const maxProjects = config.card.maxProjects || 3;
-                projectsList.innerHTML = config.projects.slice(0, maxProjects).map(project => `
-                    <div class="project-card">
-                        <h3 class="project-name">${project.name}</h3>
-                        <p class="project-desc">${project.description}</p>
-                        ${project.tags ? `<div class="project-tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>` : ''}
-                        <div style="display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap;">
-                            ${project.url && project.url !== '#' ? `<a href="${project.url}" target="_blank" class="project-link">Learn more →</a>` : ''}
-                            ${project.demo && project.demo !== '#' ? `<a href="${project.demo}" target="_blank" class="project-link">Try Demo →</a>` : ''}
-                            
+                document.getElementById('projectsList').innerHTML = config.projects.slice(0, 3).map((project, index) => `
+                    <article class="project-card">
+                        <p class="project-number">0${index + 1}</p>
+                        <div>
+                            <h3 class="project-name">${project.name}</h3>
+                            <p class="project-desc">${project.description}</p>
+                            <div class="project-tags">${project.tags.slice(0, 3).map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
                         </div>
-                    </div>
+                        <div class="project-links">
+                            ${project.url && project.url !== '#' ? `<a href="${project.url}" target="_blank" rel="noopener">Publication <span aria-hidden="true">↗</span></a>` : ''}
+                            ${project.demo && project.demo !== '#' ? `<a href="${project.demo}" target="_blank" rel="noopener">Live system <span aria-hidden="true">↗</span></a>` : ''}
+                        </div>
+                    </article>
                 `).join('');
-            } else {
-                document.getElementById('projectsSection').style.display = 'none';
             }
 
-            // Skills
             if (config.card.showSkills && config.skills) {
-                const skillsList = document.getElementById('skillsList');
-                const maxSkills = config.card.maxSkills || 6;
-                skillsList.innerHTML = config.skills.slice(0, maxSkills).map(skill => `
-                    <span class="skill-tag">${skill}</span>
-                `).join('');
-            } else {
-                document.getElementById('skillsSection').style.display = 'none';
+                document.getElementById('skillsList').innerHTML = config.skills.slice(0, 6).map(skill => `<span class="skill-tag">${skill}</span>`).join('');
             }
 
-            // Last updated
-            document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString();
-        }
-
-        function getSocialIcon(type) {
-            const icons = {
-                github: '⚙',
-                linkedin: '💼',
-                twitter: '🐦',
-                orcid: '🔬',
-                researchgate: '📚'
+            const socialPlatforms = {
+                github: { name: 'GitHub', baseUrl: 'https://github.com/' },
+                linkedin: { name: 'LinkedIn', baseUrl: 'https://linkedin.com/in/' },
+                orcid: { name: 'ORCID', baseUrl: 'https://orcid.org/' },
+                researchgate: { name: 'ResearchGate', baseUrl: 'https://www.researchgate.net/profile/' }
             };
-            return icons[type] || '🔗';
+            document.getElementById('socialLinks').innerHTML = Object.entries(config.social || {})
+                .filter(([platform, username]) => username && socialPlatforms[platform])
+                .map(([platform, username]) => {
+                    const social = socialPlatforms[platform];
+                    return `<a href="${social.baseUrl}${username}" target="_blank" rel="noopener" class="social-link">${social.name}<span class="social-icon" aria-hidden="true">↗</span></a>`;
+                }).join('');
+
+            document.getElementById('lastUpdated').textContent = new Date().getFullYear();
         }
 
         function initializeButtons(config) {
-            // Download VCF
             document.getElementById('downloadVCF').addEventListener('click', () => {
-                const vcf = generateVCF(config);
-                downloadVCF(vcf, `${config.personal.name.replace(/\s+/g, '_')}.vcf`);
+                downloadVCF(generateVCF(config), `${config.personal.name.replace(/\s+/g, '_')}.vcf`);
             });
 
-            // Disabled: Add to Wallet
-            // document.getElementById('addToWallet').addEventListener('click', () => {
-            //     addToAppleWallet(config);
-            // });
-
-            // Share
             document.getElementById('shareBtn').addEventListener('click', async () => {
                 if (navigator.share) {
                     try {
-                        await navigator.share({
-                            title: config.personal.name,
-                            text: `${config.personal.name} - ${config.personal.title}`,
-                            url: window.location.href
-                        });
-                    } catch (err) {
-                        console.log('Share cancelled');
+                        await navigator.share({ title: config.personal.name, text: `${config.personal.name} — ${config.personal.title}`, url: window.location.href });
+                    } catch (error) {
+                        if (error.name !== 'AbortError') console.error(error);
                     }
                 } else {
-                    // Fallback: copy URL
-                    navigator.clipboard.writeText(window.location.href);
-                    alert('Link copied to clipboard!');
+                    await navigator.clipboard.writeText(window.location.href);
+                    document.getElementById('shareBtn').textContent = 'Link copied';
                 }
             });
         }
 
-        function initializeCollapsible(config) {
-            // Get collapsible settings from config
-            const collapsibleSettings = config.card?.collapsible || {};
-
-            // Map section IDs to their config keys
-            const sectionMap = {
-                'socialLinksSection': 'socialLinks',
-                'projectsSection': 'projects',
-                'skillsSection': 'skills',
-                'qrCodesSection': 'qrCodes'
-            };
-
-            // Initialize each collapsible section
-            Object.keys(sectionMap).forEach(sectionId => {
-                const section = document.getElementById(sectionId);
-                if (!section) return;
-
-                const configKey = sectionMap[sectionId];
-                const shouldCollapse = collapsibleSettings[configKey] || false;
-
-                // Set initial state
-                if (shouldCollapse) {
-                    section.classList.add('collapsed');
-                }
-
-                // Add click handler to toggle button
-                const toggleBtn = section.querySelector('.collapse-toggle');
-                if (toggleBtn) {
-                    toggleBtn.addEventListener('click', () => {
-                        section.classList.toggle('collapsed');
-                    });
-                }
+        function initializeCollapsible() {
+            const section = document.getElementById('qrCodesSection');
+            const button = section.querySelector('.collapse-toggle');
+            button.addEventListener('click', () => {
+                const collapsed = section.classList.toggle('collapsed');
+                button.setAttribute('aria-expanded', String(!collapsed));
             });
         }
     </script>
